@@ -26,7 +26,7 @@ int AiPlayer::getNextTurn(Game& g) {
     bool validPick = false;
     int pick = -1;
     while (!validPick) {
-        pick = rand() % g.BoardWidth;
+        pick = (rand() % g.BoardWidth) + 1;
         if (g(pick, 0) == Empty)
             validPick = true;
     }
